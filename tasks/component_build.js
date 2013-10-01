@@ -25,7 +25,8 @@ module.exports = function(grunt) {
       paths: [],
       prefix: false,
       copy: false,
-      noRequire: false
+      noRequire: false,
+      verbose: false
     });
 
     var done = this.async();
@@ -33,7 +34,7 @@ module.exports = function(grunt) {
 
     function build(file, done) {
       async.eachSeries(file.src, function(dir, next){
-        grunt.log.writeln(dir);
+        grunt.log.writeln('building: ' + dir);
         componentbuild(dir, file.dest, next);
       }, done);
     }

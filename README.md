@@ -102,6 +102,18 @@ Copy component assets instead of symlinking.
 
 Exclude the require function at the top of the built component.
 
+### verbose
+
+Emit verbose output, eg:
+
+```
+Running "componentbuild" (componentbuild) task
+building: thing/
+duration: 155ms
+wrote: thing/build/thing.css (9kb)
+wrote: thing/build/thing.js (163kb)
+```
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].
 
